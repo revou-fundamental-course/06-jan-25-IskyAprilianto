@@ -3,7 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>portofolio</title>
+
+    <!-- my font style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- feathericons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <!-- Logo & Navigation -->
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo-icon"></div>
+
+      <!-- Navigation -->
+      <nav>
+        <a href="#" class="left-rounded">Home</a>
+        <a href="#our-profile">Our Profile</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#message-us" class="right-rounded">Message Us</a>
+      </nav>
+
+      <!-- plus icon menu -->
+      <div class="navbar-extra">
+        <a href="#" id="menu"><i data-feather="menu"></i></a>
+      </div>
+    </header>
+
+    <hr />
+
+    <!-- Main Content -->
+    <main>
+      <!-- Home Page -->
+      <section>
+        <!-- Title -->
+        <header id="home-page">
+          <h1>
+            Hallo <span id="user-greeting">User</span>, Welcome to our website
+          </h1>
+          <p>Lorem ipsum dolor sit amet adipiscing...</p>
+        </header>
+
+        <div class="banner-image"></div>
+      </section>
+
+      <!-- Our Profile -->
+      <section>
+        <!-- Title -->
+        <header id="our-profile">
+          <h1>Our Profile</h1>
+        </header>
+
+        <div class="content"></div>
+      </section>
+
+      <!-- Portfolio -->
+      <section>
+        <!-- Title -->
+        <header id="portfolio">
+          <h1>Portfolio</h1>
+        </header>
+
+        <div class="content"></div>
+      </section>
+
+      <!-- Message Us -->
+      <section>
+        <!-- Title -->
+        <header id="message-us">
+          <h1>Message Us</h1>
+        </header>
+
+        <div class="content"></div>
+      </section>
+    </main>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 - All rights reserved</p>
+    </footer>
+    <!-- feathericons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- my js -->
+    <script src="./js/script.js"></script>
+  </body>
 </html>
