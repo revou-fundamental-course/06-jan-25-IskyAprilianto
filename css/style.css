@@ -361,7 +361,8 @@ header {
 }
 
 .portfolio {
-  padding: 8rem 7% 1.4rem;
+  padding: 10rem 7% 1.4rem;
+  margin-top: 500px;
 }
 .portfolio h2 {
   text-align: center;
@@ -461,7 +462,6 @@ main {
   color: #ffffff; /* Warna kuning untuk penekanan */
 }
 
-
 /* Ubah gaya tombol kalender (input[type="date"]) */
 input[type="date"] {
   color: #000; /* Warna teks menjadi hitam */
@@ -528,7 +528,7 @@ button {
 }
 
 section {
-  scroll-margin-top: 90px; /* Sesuaikan dengan tinggi header */
+  scroll-margin-top: 70px; /* Sesuaikan dengan tinggi header */
 }
 button:hover {
   background-color: rgb(37, 37, 235);
@@ -563,37 +563,35 @@ footer::before {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Tambahkan bayangan */
 }
 
-
-  /* Efek Fade-In */
-  @keyframes fadeIn {
-    from {
-      opacity: 0; /* Awalnya tidak terlihat */
-      transform: translateY(20px); /* Mulai dari bawah */
-    }
-    to {
-      opacity: 1; /* Muncul sepenuhnya */
-      transform: translateY(0); /* Posisi asli */
-    }
+/* Efek Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Awalnya tidak terlihat */
+    transform: translateY(20px); /* Mulai dari bawah */
   }
-
-  /* Tambahkan animasi pada h1 */
-  .text-content h1 {
-    animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk h1 */
-    animation-delay: 0.5s; /* Tunda kemunculan */
-    opacity: 0; /* Awalnya tersembunyi */
+  to {
+    opacity: 1; /* Muncul sepenuhnya */
+    transform: translateY(0); /* Posisi asli */
   }
+}
 
-  /* Tambahkan animasi pada welcome */
-  .text-content .welcome {
-    animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk welcome */
-    animation-delay: 1s; /* Tunda kemunculan */
-    opacity: 0; /* Awalnya tersembunyi */
-  }
+/* Tambahkan animasi pada h1 */
+.text-content h1 {
+  animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk h1 */
+  animation-delay: 0.5s; /* Tunda kemunculan */
+  opacity: 0; /* Awalnya tersembunyi */
+}
 
-  /* Tambahkan animasi pada paragraf */
-  .text-content p {
-    animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk paragraf */
-    animation-delay: 1.5s; /* Tunda kemunculan */
-    opacity: 0; /* Awalnya tersembunyi */
-  }
+/* Tambahkan animasi pada welcome */
+.text-content .welcome {
+  animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk welcome */
+  animation-delay: 1s; /* Tunda kemunculan */
+  opacity: 0; /* Awalnya tersembunyi */
+}
+
+/* Tambahkan animasi pada paragraf */
+.text-content p {
+  animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk paragraf */
+  animation-delay: 1.5s; /* Tunda kemunculan */
+  opacity: 0; /* Awalnya tersembunyi */
 }
