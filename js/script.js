@@ -23,11 +23,11 @@ let userName = localStorage.getItem("userName");
 
 // Jika nama belum ada, minta pengguna memasukkan nama
 if (!userName) {
-  userName = prompt("Please enter your name:");
+  userName = prompt("Masukan nama panggilan anda:");
   if (userName) {
     localStorage.setItem("userName", userName);
   } else {
-    userName = "Guest";
+    userName = "Punten Mamang";
   }
 }
 
@@ -58,7 +58,7 @@ messageForm.addEventListener("submit", function (e) {
 
   // Validasi input: Pastikan semua field terisi
   if (!name || !birthdate || !gender || !message) {
-    alert("Tolong diisi ya kakak!");
+    alert("Mohon isi semua field!");
     return;
   }
 

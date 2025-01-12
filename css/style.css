@@ -37,7 +37,7 @@ body {
   display: flex;
   height: 50px;
   width: 50px;
-  background-image: url("../img/INFORMATIC.jpg");
+  background-image: url("../img/kerennn.jpg");
   background-size: cover;
   background-position: center;
   margin-left: 0px;
@@ -359,6 +359,7 @@ header {
 
 .portfolio {
   padding: 8rem 7% 1.4rem;
+  margin-bottom: 0;
 }
 
 .portfolio h2 {
@@ -390,13 +391,14 @@ header {
 .contact {
   padding: 10rem 7% 1.4rem;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
-  margin-top: 0;
+  margin-top: 0%;
 }
 
 .message-container {
@@ -522,7 +524,7 @@ footer {
   text-align: center;
   padding: 1rem 7% 1.4rem;
   position: relative;
-  margin-top: 100px;
+  margin-top: 5%;
 }
 
 footer::before {
@@ -563,4 +565,79 @@ footer::before {
   animation: fadeIn 1.5s ease-out forwards;
   animation-delay: 1.5s;
   opacity: 0;
+}
+
+.social-links {
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  background-color: #1c1d1f;
+}
+
+.social-links a {
+  color: #ffeb00;
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  background-color: #1c1d1f;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  background-color: #1c1d1f;
+}
+
+.social-links h2 {
+  font-size: 2rem;
+  color: #ffeb00;
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 3rem;
+}
+
+.social-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #ffeb00;
+  font-size: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.social-icons i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-icons span {
+  font-size: 1rem;
 }
