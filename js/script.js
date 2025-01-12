@@ -33,3 +33,48 @@ if (!userName) {
 
 // Tampilkan nama di website
 userGreeting.textContent = userName;
+
+// fungsi massage us
+// Tangkap elemen form
+const messageForm = document.getElementById("messageForm");
+
+// Tangkap elemen output
+const outputContainer = document.querySelector(".output-container");
+const outputName = document.getElementById("outputName");
+const outputBirthdate = document.getElementById("outputBirthdate");
+const outputGender = document.getElementById("outputGender");
+const outputMessage = document.getElementById("outputMessage");
+const currentTimeElement = document.getElementById("currentTime");
+
+// Tambahkan event listener untuk menangani submit
+messageForm.addEventListener("submit", function (e) {
+  e.preventDefault(); // Mencegah refresh halaman secara default
+
+  // Ambil nilai input dari form
+  const name = document.getElementById("name").value;
+  const birthdate = document.getElementById("birthdate").value;
+  const gender = document.querySelector('input[name="gender"]:checked')?.value; // Radio button terpilih
+  const message = document.getElementById("message").value;
+
+  // Validasi input: Pastikan semua field terisi
+  if (!name || !birthdate || !gender || !message) {
+    alert("Mohon isi semua field!");
+    return;
+  }
+
+  // Ambil waktu saat ini
+  const currentTime = new Date().toLocaleString();
+
+  // Tampilkan data di elemen output
+  currentTimeElement.textContent = currentTime;
+  outputName.textContent = name;
+  outputBirthdate.textContent = birthdate;
+  outputGender.textContent = gender;
+  outputMessage.textContent = message;
+
+  // Pastikan output terlihat setelah submit
+  outputContainer.style.display = "block";
+
+  // Reset form setelah submit
+  messageForm.reset();
+});

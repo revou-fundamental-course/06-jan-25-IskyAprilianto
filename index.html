@@ -65,27 +65,119 @@
       </section>
 
       <!-- Our Profile -->
-      <section id="our-profile">
+      <section id="our-profile" class="profile">
         <h2>Our Profile</h2>
-        <div class="content"></div>
+        <div class="row">
+          <div class="profile-img">
+            <img src="img/INFORMATIC.jpg" alt="our-profile" />
+          </div>
+          <div class="content">
+            <h3>Isky Dwi Aprilianto</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              quidem, voluptates, quod, quos quas quae quia doloribus voluptatum
+              nemo doloremque quibusdam. Quisquam quidem, voluptates, quod, quos
+              quas quae quia doloribus voluptatum nemo doloremque quibusdam.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- Portfolio -->
-      <section id="portfolio">
+      <section id="portfolio" class="portfolio">
         <h2>Portfolio</h2>
-        <div class="content"></div>
+        <div class="portfolio-grid">
+          <img src="img/home.png" alt="Portfolio Photo 1" />
+          <img src="img/peta.png" alt="Portfolio Photo 2" />
+          <img src="img/profile.png" alt="Portfolio Photo 3" />
+          <img src="img/photo4.jpg" alt="Portfolio Photo 4" />
+          <img src="img/photo5.jpg" alt="Portfolio Photo 5" />
+          <img src="img/photo6.jpg" alt="Portfolio Photo 6" />
+          <img src="img/photo7.jpg" alt="Portfolio Photo 7" />
+          <img src="img/photo8.jpg" alt="Portfolio Photo 8" />
+          <img src="img/photo9.jpg" alt="Portfolio Photo 9" />
+        </div>
       </section>
 
-      <!-- Message Us -->
-      <section id="message-us">
+      <section id="message-us" class="contact">
         <h2>Message Us</h2>
-        <div class="content"></div>
+        <div class="message-container">
+          <!-- Form Input -->
+          <div class="form-container">
+            <form id="messageForm">
+              <div class="form-group">
+                <label for="name">Nama:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Nama"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="birthdate">Tanggal Lahir:</label>
+                <input type="date" id="birthdate" name="birthdate" required />
+              </div>
+
+              <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="Laki-Laki"
+                  required
+                />
+                <label for="male">Laki-Laki</label>
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="Perempuan"
+                />
+                <label for="female">Perempuan</label>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan:</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Pesan"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+
+          <!-- Output -->
+          <div class="output-container">
+            <div class="output">
+              <p>
+                <strong>Current time:</strong> <span id="currentTime"></span>
+              </p>
+              <p><strong>Nama:</strong> <span id="outputName"></span></p>
+              <p>
+                <strong>Tanggal Lahir:</strong>
+                <span id="outputBirthdate"></span>
+              </p>
+              <p>
+                <strong>Jenis Kelamin:</strong> <span id="outputGender"></span>
+              </p>
+              <p><strong>Pesan:</strong> <span id="outputMessage"></span></p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 - All rights reserved</p>
+      <p>&copy; 2025 - Isky Dwi Aprilianto</p>
     </footer>
 
     <!-- feathericons -->
