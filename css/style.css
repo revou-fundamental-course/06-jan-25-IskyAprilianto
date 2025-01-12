@@ -16,16 +16,18 @@
 
 body {
   font-family: poppins;
-  background-color: #000957;
+  background-color: #1c1d1f;
   color: #ffeb00;
+  min-height: 2000px;
 }
 .main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #0c1db7;
-  background-color: rgbe(1, 1, 1, 0.8);
+  border-bottom: 1px solid #ffeb00;
+  background-color: rgba(0, 6, 8, 10);
   position: flexed;
+  opacity: 80%;
   top: 0;
   left: 0;
   right: 0;
@@ -35,8 +37,8 @@ body {
 .logo-icon {
   border-radius: 50%;
   display: flex;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   background-image: url("../img/INFORMATIC.jpg");
   background-size: cover;
   background-position: center;
@@ -54,18 +56,8 @@ nav {
   color: #ffeb00;
   font-size: 1.4rem;
 }
-.left-rounded {
-  border-radius: 12px 0 0 12px;
-  color: #ffeb00;
-}
-
-.right-rounded {
-  border-radius: 0 12px 12px 0;
-  color: #ffeb00;
-}
 
 nav > a {
-  border: 1px solid #ffeb00;
   padding: 8px;
   text-decoration: none;
   color: #ffeb00;
@@ -75,9 +67,32 @@ nav > a {
 
 nav > a:hover,
 nav > a:focus {
-  transform: scale(1.1);
-  background-color: #ffeb00;
-  color: #000957;
+  color: #ffeb00; /* Warna teks berubah menjadi kuning */
+  text-decoration: none; /* Hilangkan garis bawah default */
+  position: relative; /* Untuk garis bawah animasi */
+}
+
+nav > a::after {
+  content: ""; /* Tambahkan elemen garis */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Awalnya tersembunyi */
+  height: 2px; /* Tebal garis bawah */
+  background-color: #ffeb00; /* Warna garis bawah */
+  transition: all 0.3s ease; /* Animasi halus */
+}
+
+nav > a:hover::after,
+nav > a:focus::after {
+  width: 100%; /* Garis bawah penuh */
+}
+
+nav > a:hover::after,
+nav > a:focus::after {
+  width: 100%; /* Garis bawah penuh */
+  left: 0; /* Perluas ke seluruh elemen */
+  transform: translateX(0); /* Hilangkan offset tengah */
 }
 
 .navbar-extra a {
@@ -89,8 +104,62 @@ nav > a:focus {
   margin-top: 10px;
 }
 
+.text-content h1 {
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  font-size: 5rem;
+  margin-top: 0.5rem;
+  line-height: 100%;
+  font-weight: 100;
+  margin-left: 50px;
+  font-weight: 700; /* Bold */
+  font-size: 2.5rem; /* Ukuran besar */
+
+  margin-bottom: 0.5rem;
+}
+/* Gaya untuk welcome */
+.text-content .welcome {
+  font-size: 3rem; /* Ukuran teks untuk welcome */
+  margin-bottom: 1rem; /* Jarak ke teks berikutnya */
+  color: #ffffff; /* Warna teks untuk welcome */
+  font-weight: 400; /* Regular */
+  font-size: 1.5rem; /* Ukuran regular */
+  color: #ffffff; /* Warna putih */
+}
+
+.text-content p {
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 100%;
+  font-weight: 100;
+  margin-left: 50px;
+  margin-right: 70px;
+}
+span {
+  color: #ffeb00;
+}
+#user-greeting {
+  margin-left: 0.5rem; /* Tambahkan spasi di sebelah kiri User */
+}
+
 #menu {
   display: none;
+}
+
+header {
+  position: fixed; /* Membuat header tetap di atas layar */
+  top: 0; /* Tempelkan ke bagian atas */
+  left: 0; /* Tempelkan ke bagian kiri */
+  height: 0%; /* Tinggi header */
+  width: 100%; /* Lebar header menyesuaikan layar */
+  z-index: 500; /* Pastikan berada di atas elemen lain */
+  color: #ffffff; /* Warna teks */
+  padding: 50px; /* Jarak dalam */
+  box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk estetika */
 }
 
 /* media queries */
@@ -100,38 +169,77 @@ nav > a:focus {
     font-size: 75%;
   }
 }
-/* tablet */
+/* Menu Responsif */
 @media (max-width: 768px) {
-  html {
-    font-size: 62.5%;
-  }
   nav {
     position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #fff;
+    color: #000957;
+    top: 10.2%;
+    right: -100%; /* Awalnya tersembunyi */
+    background-color: #000957; /* Warna latar belakang */
     width: 30rem;
-    height: 100vh;
-  }
-  nav > a {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #fff;
-    width: 30rem;
-    height: 100vh;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Mulai dari atas */
+    align-items: center; /* Tengah secara horizontal */
+    transition: right 0.3s ease; /* Transisi halus */
+    z-index: 500; /* Pastikan di belakang header */
+    padding-top: 5rem; /* Tambahkan jarak dari atas */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk estetika */
   }
 
-  nav :active {
-    right: 0;
+  nav.active {
+    right: 0; /* Munculkan navigasi saat class active ditambahkan */
   }
-  nav a :active {
-    right: 0;
+
+  nav > a {
+    font-size: 1.6rem; /* Ukuran font lebih besar */
+    padding: 1rem 2rem; /* Jarak dalam */
+    text-align: center; /* Teks di tengah */
+    text-decoration: none; /* Hilangkan garis bawah default */
+    background: none; /* Hapus background */
+    border: none; /* Hapus border */
+    margin: 0.5rem 0; /* Kurangi jarak antar item */
+    position: relative; /* Untuk garis animasi */
+    color: #ffffff; /* Warna teks */
+    transition: color 0.3s ease; /* Transisi warna */
   }
+
+  /* Hover dengan animasi garis bawah */
+  nav > a::after {
+    content: ""; /* Tambahkan elemen garis */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Awalnya tersembunyi */
+    height: 2px;
+    background-color: #ffffff; /* Warna garis bawah */
+    transition: width 0.3s ease; /* Animasi muncul */
+  }
+
+  nav > a:hover::after {
+    width: 100%; /* Garis bawah penuh saat hover */
+  }
+
   #menu {
     display: inline-block;
+    position: fixed; /* Tetapkan tombol menu tetap di layar */
+    top: 0rem; /* Jarak dari atas */
+    right: 1rem; /* Jarak dari kanan */
+    z-index: 1000; /* Pastikan tombol menu di atas navigasi */
+    font-size: 2rem; /* Ukuran tombol menu */
+    color: #ffeb00;
+    padding: 0.5rem 1rem; /* Jarak dalam tombol menu */
+    border-radius: 5px; /* Tombol menu dengan sudut membulat */
+    cursor: pointer;
+  }
+
+  #menu:hover {
+    color: #ffeb00; /* Warna teks tombol tetap putih */
   }
 }
+
 /* handphone */
 @media (max-width: 450px) {
   html {
@@ -142,12 +250,15 @@ nav > a:focus {
   }
 }
 
-.banner-image {
+.hero {
   height: 450px;
-  background-image: url(https://picsum.photos/1000);
   background-size: cover;
   background-position: center;
-  color: #ffeb00;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
 }
 
 .content {
@@ -157,4 +268,37 @@ nav > a:focus {
 
 footer {
   text-align: center;
+}
+
+/* Efek Fade-In */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Awalnya tidak terlihat */
+    transform: translateY(20px); /* Mulai dari bawah */
+  }
+  to {
+    opacity: 1; /* Muncul sepenuhnya */
+    transform: translateY(0); /* Posisi asli */
+  }
+}
+
+/* Tambahkan animasi pada h1 */
+.text-content h1 {
+  animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk h1 */
+  animation-delay: 0.5s; /* Tunda kemunculan */
+  opacity: 0; /* Awalnya tersembunyi */
+}
+
+/* Tambahkan animasi pada welcome */
+.text-content .welcome {
+  animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk welcome */
+  animation-delay: 1s; /* Tunda kemunculan */
+  opacity: 0; /* Awalnya tersembunyi */
+}
+
+/* Tambahkan animasi pada paragraf */
+.text-content p {
+  animation: fadeIn 1.5s ease-out forwards; /* Efek muncul untuk paragraf */
+  animation-delay: 1.5s; /* Tunda kemunculan */
+  opacity: 0; /* Awalnya tersembunyi */
 }

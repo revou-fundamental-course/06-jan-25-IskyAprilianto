@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portofolio</title>
+    <title>Portfolio</title>
 
     <!-- my font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,17 +21,17 @@
   </head>
 
   <body>
-    <!-- Logo & Navigation -->
+    <!-- Main Header -->
     <header class="main-header">
       <!-- Logo -->
       <div class="logo-icon"></div>
 
       <!-- Navigation -->
       <nav>
-        <a href="#" class="left-rounded">Home</a>
+        <a href="#">Home</a>
         <a href="#our-profile">Our Profile</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#message-us" class="right-rounded">Message Us</a>
+        <a href="#message-us">Message Us</a>
       </nav>
 
       <!-- plus icon menu -->
@@ -40,60 +40,54 @@
       </div>
     </header>
 
-    <hr />
-
     <!-- Main Content -->
     <main>
       <!-- Home Page -->
-      <section>
-        <!-- Title -->
-        <header id="home-page">
-          <h1>
-            Hallo <span id="user-greeting">User</span>, Welcome to our website
-          </h1>
-          <p>Lorem ipsum dolor sit amet adipiscing...</p>
-        </header>
-
-        <div class="banner-image"></div>
+      <section class="hero" id="home-page">
+        <div class="text-content">
+          <h1>Hallo... <span id="user-greeting">User</span></h1>
+          <p class="welcome">Welcome to our website</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
+            repellendus suscipit, exercitationem veniam velit illum, laudantium,
+            assumenda neque eos possimus asperiores. Illo aut incidunt
+            consectetur nesciunt dolore autem ex corrupti commodi,
+            exercitationem necessitatibus veritatis quaerat tempora? Dolores
+            officiis veniam optio iste dolor repudiandae praesentium quas esse,
+            aperiam provident facere aut ex possimus asperiores distinctio sit
+            cupiditate magni nesciunt nisi in eligendi, nobis temporibus quae
+            omnis. Deleniti tempora enim accusantium, reprehenderit, ipsum ullam
+            nam, sunt impedit hic ex aperiam fugit maxime optio laboriosam vel
+            tenetur illo iste fugiat totam sit quod! Corrupti voluptatem at,
+            beatae corporis neque nobis molestiae animi! Error?
+          </p>
+        </div>
       </section>
 
       <!-- Our Profile -->
-      <section>
-        <!-- Title -->
-        <header id="our-profile">
-          <h1>Our Profile</h1>
-        </header>
-
+      <section id="our-profile">
+        <h2>Our Profile</h2>
         <div class="content"></div>
       </section>
 
       <!-- Portfolio -->
-      <section>
-        <!-- Title -->
-        <header id="portfolio">
-          <h1>Portfolio</h1>
-        </header>
-
+      <section id="portfolio">
+        <h2>Portfolio</h2>
         <div class="content"></div>
       </section>
 
       <!-- Message Us -->
-      <section>
-        <!-- Title -->
-        <header id="message-us">
-          <h1>Message Us</h1>
-        </header>
-
+      <section id="message-us">
+        <h2>Message Us</h2>
         <div class="content"></div>
       </section>
     </main>
-
-    <hr />
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 - All rights reserved</p>
     </footer>
+
     <!-- feathericons -->
     <script>
       feather.replace();
