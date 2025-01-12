@@ -4,14 +4,14 @@ const nav = document.querySelector("nav");
 
 // Toggle class active saat menu diklik
 menu.addEventListener("click", (e) => {
-  e.preventDefault(); // Mencegah perilaku default link
-  nav.classList.toggle("active"); // Tambah/hapus class active
+  e.preventDefault();
+  nav.classList.toggle("active");
 });
 
 // Tutup menu saat klik di luar elemen menu atau navbar
 document.addEventListener("click", (e) => {
   if (!menu.contains(e.target) && !nav.contains(e.target)) {
-    nav.classList.remove("active"); // Hapus class active jika klik di luar
+    nav.classList.remove("active");
   }
 });
 
@@ -25,9 +25,9 @@ let userName = localStorage.getItem("userName");
 if (!userName) {
   userName = prompt("Please enter your name:");
   if (userName) {
-    localStorage.setItem("userName", userName); // Simpan nama di Local Storage
+    localStorage.setItem("userName", userName);
   } else {
-    userName = "Guest"; // Jika pengguna tidak memasukkan nama
+    userName = "Guest";
   }
 }
 
@@ -48,17 +48,17 @@ const currentTimeElement = document.getElementById("currentTime");
 
 // Tambahkan event listener untuk menangani submit
 messageForm.addEventListener("submit", function (e) {
-  e.preventDefault(); // Mencegah refresh halaman secara default
+  e.preventDefault();
 
   // Ambil nilai input dari form
   const name = document.getElementById("name").value;
   const birthdate = document.getElementById("birthdate").value;
-  const gender = document.querySelector('input[name="gender"]:checked')?.value; // Radio button terpilih
+  const gender = document.querySelector('input[name="gender"]:checked')?.value;
   const message = document.getElementById("message").value;
 
   // Validasi input: Pastikan semua field terisi
   if (!name || !birthdate || !gender || !message) {
-    alert("Mohon isi semua field!");
+    alert("Tolong diisi ya kakak!");
     return;
   }
 
