@@ -1,3 +1,4 @@
+/* ini adalah CSS */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ body {
     180deg,
     rgba(28, 29, 32, 1),
     rgba(28, 29, 32, 0.5)
-  ); /* Sama dengan .hero::after */
+  );
   color: #ffeb00;
   display: flex;
   flex-direction: column;
@@ -289,7 +290,7 @@ header {
 }
 
 .hero {
-  height: 100vh; /* Sesuaikan dengan kebutuhan */
+  height: 100vh;
   display: flex;
   align-items: center;
   background: linear-gradient(
@@ -302,18 +303,18 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  /* z-index: -1; */ /* Coba hapus jika menyebabkan masalah */
   margin-top: 0;
+  left: 2.5%;
 }
 
 .hero::after {
   content: "";
   position: absolute;
   display: block;
-  width: 100%; /* Lebar penuh */
-  height: 100%; /* Tinggi penuh */
-  z-index: -1; /* Menempatkan di belakang konten utama */
-  pointer-events: none; /* Agar tidak mengganggu interaksi pengguna */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .profile {
@@ -531,9 +532,10 @@ footer {
   background-color: #1c1d1f;
   color: #ffffff;
   text-align: center;
-  padding: 1rem 7% 1.4rem;
+  padding: 0.5rem 7% 1.4rem;
   position: relative;
   margin-top: 5%;
+  left: 0;
 }
 
 footer::before {
@@ -576,44 +578,39 @@ footer::before {
   opacity: 0;
 }
 
-/* Mengatur Box Sizing untuk Semua Elemen */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Gaya untuk bagian Social Links */
 .social-links {
-  width: 100%; /* Mengatur lebar penuh */
-  display: flex; /* Menggunakan Flexbox */
-  flex-direction: column; /* Mengatur arah kolom */
-  align-items: center; /* Memusatkan item secara horizontal */
-  justify-content: center; /* Memusatkan item secara vertikal */
-  gap: 1.5rem; /* Jarak antar elemen */
-  padding: 2rem 1rem; /* Padding atas/bawah dan kiri/kanan */
-  margin-top: 10%; /* Margin atas */
-  background-color: #1c1d1f; /* Warna latar belakang saat ini */
-  position: relative; /* Untuk positioning pseudo-element */
-  z-index: 1; /* Menetapkan z-index */
-  /* Remove max-width to allow full width */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  margin-top: 10%;
+  background-color: #1c1d1f;
+  position: relative;
+  z-index: 1;
 }
 
-/* Pseudo-Element sebagai Pembungkus Putih */
 .social-links::before {
   content: "";
   position: absolute;
-  top: -20px; /* Mengatur jarak atas */
-  left: -20px; /* Mengatur jarak kiri */
-  right: -20px; /* Mengatur jarak kanan */
-  bottom: -20px; /* Mengatur jarak bawah */
-  background-color: #1c1d1f; /* Warna latar belakang pembungkus */
-  z-index: -1; /* Menempatkan di belakang konten utama */
-  border-radius: 10px; /* Membulatkan sudut pembungkus */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-color: #1c1d1f;
+  z-index: -1;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Gaya untuk Judul Kontak */
 .social-links h2 {
   font-size: 2rem;
   color: #ffeb00;
@@ -623,62 +620,52 @@ footer::before {
   letter-spacing: 2px;
 }
 
-/* Mengatur Tampilan Ikon Sosial */
 .social-icons {
   display: flex;
   gap: 3rem;
-  justify-content: center; /* Memusatkan ikon secara horizontal */
-  align-items: center; /* Memusatkan ikon secara vertikal */
+  justify-content: center;
+  align-items: center;
 }
 
-/* Gaya untuk Setiap Link Sosial */
 .social-icons a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  text-decoration: none;
   color: #ffeb00;
   font-size: 1rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Efek Hover pada Link Sosial */
 .social-icons a:hover {
   color: #ffffff;
   transform: scale(1.1);
 }
 
-/* Gaya untuk Ikon */
 .social-icons i {
   font-size: 2rem;
-  margin-bottom: 0.3rem; /* Mengurangi margin bawah */
+  margin-bottom: 0.3rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Efek Rotasi Ikon saat Hover */
 .social-icons a:hover i {
   transform: rotate(360deg);
 }
 
-/* Gaya untuk Teks di Bawah Ikon */
 .social-icons span {
-  font-size: 0.8rem; /* Mengurangi ukuran font */
-  margin-top: 0.2rem; /* Menambahkan margin atas */
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efek Pergeseran Teks saat Hover */
 .social-icons a:hover span {
-  /* Menghapus transformasi teks agar tidak bergerak */
 }
 
-/* Fokus pada Link Sosial untuk Aksesibilitas */
 .social-icons a:focus {
   outline: 2px solid #ffeb00;
   outline-offset: 4px;
 }
 
-/* Latar Belakang Halaman dan Padding */
 body {
   background-color: #121212;
   padding: 2rem 0;
