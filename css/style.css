@@ -304,7 +304,7 @@ header {
   background-repeat: no-repeat;
   position: relative;
   margin-top: 0;
-  left: 2.5%;
+  left: 0;
 }
 
 .hero::after {
@@ -535,7 +535,8 @@ footer {
   padding: 0.5rem 7% 1.4rem;
   position: relative;
   margin-top: 5%;
-  left: 2.6%;
+  left: 0;
+  width: 102%;
 }
 
 footer::before {
@@ -602,8 +603,8 @@ footer::before {
   content: "";
   position: absolute;
   top: -20px;
-  left: 0;
-  right: -30px;
+  left: -20px;
+  right: -20px;
   bottom: -20px;
   background-color: #1c1d1f;
   z-index: -1;
