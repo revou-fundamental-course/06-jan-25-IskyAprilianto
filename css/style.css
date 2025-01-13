@@ -535,7 +535,7 @@ footer {
   padding: 0.5rem 7% 1.4rem;
   position: relative;
   margin-top: 5%;
-  left: 0;
+  left: 2.6%;
 }
 
 footer::before {
@@ -602,8 +602,8 @@ footer::before {
   content: "";
   position: absolute;
   top: -20px;
-  left: -20px;
-  right: -20px;
+  left: 0;
+  right: -30px;
   bottom: -20px;
   background-color: #1c1d1f;
   z-index: -1;
