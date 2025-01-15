@@ -673,3 +673,29 @@ body {
   background-color: #121212;
   padding: 2rem 0;
 }
+/* Banner slider */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner-slider .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.banner-slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-slider .slide.active {
+  opacity: 1;
+  z-index: 1;
+}

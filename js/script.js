@@ -78,3 +78,27 @@ messageForm.addEventListener("submit", function (e) {
   // Reset form setelah submit
   messageForm.reset();
 });
+
+// fungsi banner slider
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".banner-slider .slide");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      if (i === index) slide.classList.add("active");
+    });
+  }
+
+  function autoSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  // Show the first slide initially
+  showSlide(currentIndex);
+
+  // Change slide every 5 seconds
+  setInterval(autoSlide, 5000);
+});
