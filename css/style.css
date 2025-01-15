@@ -24,7 +24,7 @@ body {
   background-position: center;
   width: 100%;
 }
-
+/* Header */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -40,7 +40,7 @@ body {
   margin-right: 10px;
   width: 100%;
 }
-
+/* Logo */
 .logo-icon {
   border-radius: 50%;
   display: flex;
@@ -53,7 +53,7 @@ body {
   flex-shrink: 0;
   margin-top: 5px;
 }
-
+/* NavBar */
 nav {
   display: flex;
   justify-content: space-between;
@@ -159,7 +159,7 @@ span {
 #menu {
   display: none;
 }
-
+/* header */
 header {
   position: fixed;
   top: 0;
@@ -171,13 +171,14 @@ header {
   padding: 50px;
   box-shadow: 10px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
+/* Responsif */
+/* Laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
   }
 }
-
+/* Tablet */
 @media (max-width: 768px) {
   nav {
     font-size: 2rem;
@@ -269,6 +270,7 @@ header {
   }
 }
 
+/* HandPhone */
 @media (max-width: 450px) {
   html {
     font-size: 62.5%;
@@ -290,7 +292,7 @@ header {
     font-size: 1rem;
   }
 }
-
+/* BG dan Gradasi supaya tidak ada garis terpotong antar halaman */
 .hero {
   height: 100vh;
   display: flex;
@@ -319,6 +321,7 @@ header {
   pointer-events: none;
 }
 
+/* halaman profile */
 .profile {
   padding: 8rem 7% 1.4rem;
   margin-top: 5px;
@@ -369,6 +372,7 @@ header {
   line-height: 1.5;
 }
 
+/* halaman portofolio */
 .portfolio {
   padding: 8rem 7% 1.4rem;
   margin-bottom: 0;
@@ -400,6 +404,7 @@ header {
   transform: scale(1.05);
 }
 
+/* halaman pesan */
 .contact {
   padding: 10rem 7% 1.4rem;
   margin-top: 100px;
@@ -475,45 +480,62 @@ input[type="date"]:focus {
   border: 1px solid #000957;
 }
 
-.form-group {
-  margin-bottom: 1rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  color: #ffffff;
 }
 
 label {
-  display: block;
-  margin-bottom: 0.4rem;
+  font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  margin-bottom: 5px;
 }
 
-input,
+input[type="text"],
+input[type="date"],
 textarea {
   width: 100%;
-  padding: 0.6rem;
-  border: 1px solid #555;
-  border-radius: 5px;
-  background-color: #b7b7b7;
-  color: #fff;
-  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f8f8f8;
 }
 
 textarea {
-  resize: none;
-  height: 90px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-group div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 button {
-  display: block;
-  width: 100%;
-  padding: 0.6rem;
-  background-color: #000957;
-  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: white;
+  background-color: #1e40af;
   border: none;
-  border-radius: 5px;
-  font-size: 0.9rem;
+  border-radius: 4px;
   cursor: pointer;
-  text-transform: uppercase;
-  margin-top: 0.8rem;
+}
+
+button:hover {
+  background-color: #1e3a8a;
 }
 
 section {
@@ -530,6 +552,7 @@ button:hover {
   color: #fff;
 }
 
+/* Footer */
 footer {
   background-color: #1c1d1f;
   color: #ffffff;
@@ -552,6 +575,7 @@ footer::before {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Animasi awal masuk */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -587,6 +611,7 @@ footer::before {
   box-sizing: border-box;
 }
 
+/* Link kontak sosial media */
 .social-links {
   width: 100%;
   display: flex;
@@ -662,6 +687,7 @@ footer::before {
 }
 
 .social-icons a:hover span {
+  color: #ffffff;
 }
 
 .social-icons a:focus {

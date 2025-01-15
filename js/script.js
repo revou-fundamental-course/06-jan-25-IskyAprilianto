@@ -3,14 +3,14 @@ const menu = document.querySelector("#menu");
 const nav = document.querySelector("nav");
 
 // Toggle class active saat menu diklik
-menu.addEventListener("click", (e) => {
-  e.preventDefault();
+menu.addEventListener("click", (event) => {
+  event.preventDefault();
   nav.classList.toggle("active");
 });
 
 // Tutup menu saat klik di luar elemen menu atau navbar
-document.addEventListener("click", (e) => {
-  if (!menu.contains(e.target) && !nav.contains(e.target)) {
+document.addEventListener("click", (event) => {
+  if (!menu.contains(event.target) && !nav.contains(event.target)) {
     nav.classList.remove("active");
   }
 });
@@ -27,59 +27,54 @@ if (!userName) {
   if (userName) {
     localStorage.setItem("userName", userName);
   } else {
-    userName = "Punten Mamang";
+    userName = "Pengunjung";
   }
 }
 
 // Tampilkan nama di website
 userGreeting.textContent = userName;
 
-// fungsi massage us
 // Tangkap elemen form
-const messageForm = document.getElementById("messageForm");
+const messageForm = document.getElementById("messageform");
 
 // Tangkap elemen output
 const outputContainer = document.querySelector(".output-container");
-const outputName = document.getElementById("outputName");
-const outputBirthdate = document.getElementById("outputBirthdate");
-const outputGender = document.getElementById("outputGender");
-const outputMessage = document.getElementById("outputMessage");
-const currentTimeElement = document.getElementById("currentTime");
+const outputName = document.getElementById("outputname");
+const outputBirthdate = document.getElementById("outputbirthdate");
+const outputGender = document.getElementById("outputgender");
+const outputMessage = document.getElementById("outputmessage");
+const currentTimeElement = document.getElementById("currenttime");
 
-// Tambahkan event listener untuk menangani submit
-messageForm.addEventListener("submit", function (e) {
-  e.preventDefault();
+// Fungsi untuk menangani submit form
+const handleFormSubmit = (event) => {
+  event.preventDefault();
 
-  // Ambil nilai input dari form
   const name = document.getElementById("name").value;
   const birthdate = document.getElementById("birthdate").value;
   const gender = document.querySelector('input[name="gender"]:checked')?.value;
   const message = document.getElementById("message").value;
 
-  // Validasi input: Pastikan semua field terisi
   if (!name || !birthdate || !gender || !message) {
     alert("Mohon isi semua field!");
     return;
   }
 
-  // Ambil waktu saat ini
   const currentTime = new Date().toLocaleString();
 
-  // Tampilkan data di elemen output
   currentTimeElement.textContent = currentTime;
   outputName.textContent = name;
   outputBirthdate.textContent = birthdate;
   outputGender.textContent = gender;
   outputMessage.textContent = message;
 
-  // Pastikan output terlihat setelah submit
   outputContainer.style.display = "block";
-
-  // Reset form setelah submit
   messageForm.reset();
-});
+};
 
-// fungsi banner slider
+// Tambahkan event listener untuk submit form
+messageForm.addEventListener("submit", handleFormSubmit);
+
+// Fungsi banner slider
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".banner-slider .slide");
   let currentIndex = 0;
@@ -87,7 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.classList.remove("active");
-      if (i === index) slide.classList.add("active");
+      if (i === index) {
+        slide.classList.add("active");
+      }
     });
   }
 
@@ -96,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentIndex);
   }
 
-  // Show the first slide initially
+  // menampilkan slide pertama
   showSlide(currentIndex);
 
-  // Change slide every 5 seconds
-  setInterval(autoSlide, 5000);
+  // Ganti slide setiap 3 detik
+  setInterval(autoSlide, 3000);
 });

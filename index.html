@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>MyPortfolio</title>
 
     <!-- my font style -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -36,7 +36,14 @@
 
       <!-- plus icon menu -->
       <div class="navbar-extra">
-        <a href="#" id="menu"><i data-feather="menu"></i></a>
+        <a
+          href="#"
+          id="menu"
+          aria-label="Buka menu navigasi"
+          title="Buka menu navigasi"
+        >
+          <i data-feather="menu"></i>
+        </a>
       </div>
     </header>
 
@@ -113,7 +120,7 @@
         <div class="message-container">
           <!-- Form Input -->
           <div class="form-container">
-            <form id="messageForm">
+            <form id="messageform">
               <div class="form-group">
                 <label for="name">Nama:</label>
                 <input
@@ -132,16 +139,25 @@
 
               <div class="form-group">
                 <label>Jenis Kelamin:</label>
-                <input
-                  type="radio"
-                  id="male"
-                  name="gender"
-                  value="pria"
-                  required
-                />
-                <label for="male">Pria</label>
-                <input type="radio" id="female" name="gender" value="wanita" />
-                <label for="female">Wanita</label>
+                <div>
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="pria"
+                    required
+                  />
+                  <label for="male">Pria</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="wanita"
+                  />
+                  <label for="female">Wanita</label>
+                </div>
               </div>
 
               <div class="form-group">
@@ -170,9 +186,9 @@
                 <span id="outputbirthdate"></span>
               </p>
               <p>
-                <strong>Jenis Kelamin:</strong> <span id="outputGender"></span>
+                <strong>Jenis Kelamin:</strong> <span id="outputgender"></span>
               </p>
-              <p><strong>Pesan:</strong> <span id="outputMessage"></span></p>
+              <p><strong>Pesan:</strong> <span id="outputmessage"></span></p>
             </div>
           </div>
         </div>
@@ -184,18 +200,25 @@
           <a
             href="https://www.linkedin.com"
             target="_blank"
+            rel="noopener"
             aria-label="LinkedIn"
           >
             <i data-feather="linkedin"></i>
             <span>LinkedIn</span>
           </a>
-          <a href="https://github.com" target="_blank" aria-label="GitHub">
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+          >
             <i data-feather="github"></i>
             <span>GitHub</span>
           </a>
           <a
             href="https://instagram.com"
             target="_blank"
+            rel="noopener"
             aria-label="Instagram"
           >
             <i data-feather="instagram"></i>
@@ -203,6 +226,7 @@
           </a>
         </div>
       </section>
+
       <!-- Banner Slider -->
       <section class="banner-slider">
         <div class="slide">
