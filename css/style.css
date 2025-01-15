@@ -59,7 +59,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgbe(1, 1, 1, 0.8);
+  background-color: rgba(1, 1, 1, 0.8);
   color: #ffeb00;
   font-size: 1.4rem;
 }
